@@ -1,0 +1,33 @@
+host bastionET2598
+hostname 188.95.226.75
+port 22
+user shiva 
+IdentityFile /home/shiva/.ssh/shiva
+
+host devA
+hostname 10.1.0.181
+port 22
+user shiva 
+IdentityFile /home/shiva/.ssh/shiva
+proxyjump bastionET2598
+
+host devB
+hostname 10.1.0.15
+port 22
+user shiva 
+IdentityFile /home/shiva/.ssh/shiva
+proxyjump bastionET2598
+
+host devC
+hostname 10.1.0.145
+port 22
+user shiva 
+IdentityFile /home/shiva/.ssh/shiva
+proxyjump bastionET2598
+
+host devhaproxy
+hostname 188.95.231.43
+port 22
+user shiva 
+IdentityFile /home/shiva/.ssh/shiva
+proxyjump bastionET2598
